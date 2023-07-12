@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #666A73;
+    background-color: #FFFF;
     /* 山上云下-1-hex */
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #F2F2F2;
+    background-color: #FFFF;
     /* 山上云下-3-hex */
     padding: 20px 0;
     text-align: center;
@@ -45,16 +45,17 @@ h1 {
     padding: 20px;
     position: relative;
     overflow: hidden;
-    background-color: #B4BBBF;
+    background-color: #F2F2F2;
     /* 山上云下-2-hex */
     border-radius: 15px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, height 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     height: 500px;
+    box-shadow: #0D0D0D;
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px #404040;
+    box-shadow: 0 0 10px #A4A5A6;
     /* 山上云下-4-hex */
     height: 600px;
 }
@@ -67,16 +68,15 @@ h1 {
 
 .card-info {
     height: 100px;
+    width: 100%;
     transition: opacity 0.3s ease-in-out;
-    background-color: #B4BBBF;
+    background-color: #F2F2F2;
     /* 山上云下-2-hex */
     color: #0D0D0D;
     /* 山上云下-5-hex */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .hover-text {
@@ -116,5 +116,81 @@ h1 {
 .pagination button:hover,
 .pagination button:focus {
     outline: none;
-    color: #0070f3;
+    color: #0D0D0D;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form label {
+    color: #0D0D0D;
+    /* 山上云下-5-hex */
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #FFFF;
+    /* 山上云下-1-hex */
+    color: #0D0D0D;
+    /* 山上云下-5-hex */
+}
+
+form input[type="submit"] {
+    background-color: #A4A5A6;
+    /* 山上云下-4-hex */
+    color: #0D0D0D;
+    /* 山上云下-5-hex */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #F2F2F2;
+    /* 山上云下-2-hex */
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #FFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen .card {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fullscreen .image-container {
+    width: 50%;
+}
+
+.fullscreen .card-info {
+    width: 20%;
+    padding-left: 200px;
+    text-align: right;
+    justify-self: right;
+    
 }
